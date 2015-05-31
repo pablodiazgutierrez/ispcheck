@@ -4,15 +4,15 @@ isps = ('gmail.', 'yahoo.', 'earthlink.', 'comcast.', 'att.', 'movistar.', 'hotm
         'xtra.', 'web.', 'cox.', 'ymail.', 'aim.', 'rogers.', 'verizon.', 'rocketmail.', 'google.', 'optonline.',
         'sbcglobal.', 'aol.', 'me.', 'btinternet.', 'charter.', 'shaw.')
 
-def check_domain(domain):
+def is_isp_domain(domain):
   'Return True if the domain is a known ISP; False otherwise.'
   for isp in isps:
     if domain.startswith(isp):
       return True
   return False
 
-def check_email(email):
+def is_isp_email(email):
   'Return True if the domain for this email is a known ISP; False otherwise.'
   domain = email.split('@')[1]
-  return check_domain(domain)
+  return is_isp_domain(domain)
 

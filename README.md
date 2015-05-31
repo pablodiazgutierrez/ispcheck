@@ -7,9 +7,9 @@ The list of ISP domains is by no means all inclusive. If you'd like to include a
 ```
 In [1]: from ispcheck import check_domain, check_email
 
-In [2]: check_domain('gmail.es')
+In [2]: is_isp_domain('gmail.es')
 Out[2]: True
 
-In [3]: check_email('foo@appfluence.com')
+In [3]: is_isp_email('foo@appfluence.com')
 Out[3]: False
 ```
